@@ -5,14 +5,15 @@ wire Y;
 mux_8x1 MUX_INST(I,S,Y);
 initial begin 
 $monitor($time,"I=%b,S=%b,Y=%b",I,S,Y);
-I=4'b1011011;S=3'b000;
+I=8'b1011011;S=3'b000;
 #10 S =3'b001;
 #10 S=3'b010;
 #10 S=3'b110;
-#10 I=4'b1011001;S=3'b000;
+#10 I=8'b1011001;S=3'b000;
 #10 S=3'b011;#10 S=3'b100;
 #10 S=3'b111;
 #10 $stop;
 end
 endmodule
+
 
