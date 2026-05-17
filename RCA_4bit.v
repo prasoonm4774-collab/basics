@@ -1,3 +1,10 @@
+module FA(a,b,cin,sum,cout);
+input a,b,cin;
+output sum;
+output cout;
+assign sum = a ^ b ^ cin;
+assign cout = (a & b) | (b & cin) | (cin & a);
+endmodule
 module RCA_4bit(a,b,c,s);
 input [3:0] a,b;
 input c;
